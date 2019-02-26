@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Author" contect="http://www.webqin.net">
+<title>蘑菇租房</title>
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link type="text/css" href="css/css.css" rel="stylesheet" />
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+ <link rel="stylesheet" href="layui/css/layui.css">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+ <script type="application/javascript" src="js/bootstrap.min.js"></script>
+ <script type="application/javascript" src="layui/layui.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript">
+ $(function(){
+	 //导航定位
+ $(".nav li:eq(0)").addClass("navCur");
+ })
+</script>
+</head>
+
+<body>
+ <div class="layui-row">
+ <div class="header">
+   <div class="width1190">
+   <div class="fl">您好，欢迎来到蘑菇租房！</div>
+   <div class="fr">
+    <span class="layui-breadcrumb" lay-separator="|">
+        <a href="login.html">登录</a> |
+         <a href="reg.html">注册</a> |
+         <a href="javascript:;" onclick="AddFavorite(window.location,document.title)">加入收藏</a> |
+         <a href="javascript:;" onclick="SetHome(this,window.location)">设为首页</a>
+    </span>
+    <script>
+     //注意：导航 依赖 element 模块，否则无法进行功能性操作
+     layui.use('element', function(){
+      var element = layui.element;
+
+      //…
+     });
+    </script>
+   </div>
+   <div class="clears"></div>
+
+  </div><!--width1190/-->
+ </div><!--header/-->
+</div>
+
+
+<div class="logo-phone">
+  <div class="width1190">
+   <h1 class="logo"><a href="index.html"><img src="images/mogu.png" width="154" height="59" /></a></h1>
+   <div class="phones"><strong>021-63179891</strong></div>
+   <div class="clears"></div>
+  </div><!--width1190/-->
+ </div><!--logo-phone/-->
+ <div class="list-nav">
+  <div class="width1190">
+
+   <ul class="layui-nav layui-bg-green">
+    <li class="layui-nav-item layui-this"><a href="index.html">首页</a></li>
+    <li class="layui-nav-item"><a href="pro_zu.html">租房</a></li>
+    <li class="layui-nav-item"><a href="pro_hotBrand.html">优选品牌</a></li>
+    <li class="layui-nav-item"><button class="layui-btn" onclick="add()">指定购房</button></li>
+    <li class="layui-nav-item"><a href="user_jingji.html">申请自由经纪人</a></li>
+    <li class="layui-nav-item"><a href="about.html">关于我们</a></li>
+    <div class="clears"></div>
+   </ul>>&lt;!&ndash;nav/&ndash;&gt;
+   <script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+     var element = layui.element;
+
+     //…
+    });
+   </script>
+   <div class="clears"></div>
+  </div><!--width1190/-->
+ </div><!--list-nav/-->
+ <div class="banner" style="background:url(images/ban.jpg) center center no-repeat;"></div>
+ <div class="content">
+  <div class="width1190">
+   <h2 class="title">租房 <a href="pro_zu.html">更多&gt;&gt;</a></h2>
+
+   <div class="index-fang-list">
+    <div class="layui-carousel" id="test1">
+     <div carousel-item>
+      <div>
+    <dl>
+     <dt><a href="proinfo.html"><img src="images/fang1.jpg" width="286" height="188" /></a></dt>
+     <dd>
+      <h3><a href="proinfo.html"></a>虹桥乐亭</h3>
+      <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+     </dd>
+    </dl>
+     <dl>
+      <dt><a href="proinfo.html"><img src="images/fang2.jpg" width="286" height="188" /></a></dt>
+      <dd>
+       <h3><a href="proinfo.html"></a>静安豪景</h3>
+       <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+      </dd>
+     </dl>
+     <dl>
+      <dt><a href="proinfo.html"><img src="images/fang2.jpg" width="286" height="188" /></a></dt>
+      <dd>
+       <h3><a href="proinfo.html"></a>静安豪景</h3>
+       <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+      </dd>
+     </dl>
+      </div>
+      <div>
+    <dl>
+     <dt><a href="proinfo.html"><img src="images/fang2.jpg" width="286" height="188" /></a></dt>
+     <dd>
+      <h3><a href="proinfo.html"></a>静安豪景</h3>
+      <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+     </dd>
+    </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang2.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>静安豪景</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang2.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>静安豪景</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+       </div>
+      <div>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang4.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>水塘小区</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang2.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>静安豪景</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang2.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>静安豪景</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+      </div>
+      <div>
+    <dl>
+     <dt><a href="proinfo.html"><img src="images/fang4.jpg" width="286" height="188" /></a></dt>
+     <dd>
+      <h3><a href="proinfo.html"></a>水塘小区</h3>
+      <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+     </dd>
+    </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang2.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>静安豪景</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang2.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>静安豪景</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang2.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>静安豪景</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+      </div>
+    <!--<div class="clears"></div>-->
+     </div>
+  </div>
+   </div><!--index-fang-list/-->
+   <script>
+    layui.use('carousel', function(){
+     var carousel = layui.carousel;
+     //建造实例
+     carousel.render({
+      elem: '#test1'
+      ,width: '100%' //设置容器宽度
+      ,arrow: 'always' //始终显示箭头
+      //,anim: 'updown' //切换动画方式
+     });
+    });
+   </script>
+
+
+   <h2 class="title">优选品牌 <a href="pro_hotBrand.html">更多&gt;&gt;</a></h2>
+   <div class="index-fang-list">
+    <div class="layui-carousel" id="test2">
+     <div carousel-item>
+      <div>
+    <dl>
+       <dt><a href="proinfo.html"><img src="images/fang5.jpg" width="286" height="188" /></a></dt>
+       <dd>
+        <h3><a href="proinfo.html"></a>虹桥乐亭</h3>
+        <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+       </dd>
+      </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang5.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>虹桥乐亭</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang5.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>虹桥乐亭</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+
+      </div>
+      <div>
+    <dl>
+     <dt><a href="proinfo.html"><img src="images/fang6.jpg" width="286" height="188" /></a></dt>
+     <dd>
+      <h3><a href="proinfo.html"></a>静安豪景</h3>
+      <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+     </dd>
+    </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang5.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>虹桥乐亭</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang5.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>虹桥乐亭</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+
+      </div>
+      <div>
+    <dl>
+     <dt><a href="proinfo.html"><img src="images/fang7.jpg" width="286" height="188" /></a></dt>
+     <dd>
+      <h3><a href="proinfo.html"></a>中凯城市之光(静安)</h3>
+      <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+     </dd>
+    </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang5.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>虹桥乐亭</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang5.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>虹桥乐亭</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+
+      </div>
+      <div>
+    <dl>
+     <dt><a href="proinfo.html"><img src="images/fang7.jpg" width="286" height="188" /></a></dt>
+     <dd>
+      <h3><a href="proinfo.html"></a>中凯城市之光(静安)</h3>
+      <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+     </dd>
+    </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang5.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>虹桥乐亭</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang5.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>虹桥乐亭</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+       <dl>
+        <dt><a href="proinfo.html"><img src="images/fang5.jpg" width="286" height="188" /></a></dt>
+        <dd>
+         <h3><a href="proinfo.html"></a>虹桥乐亭</h3>
+         <div class="hui">3室2厅2卫 | 147m² | 精装修</div>
+        </dd>
+       </dl>
+      </div>
+     </div>
+    </div>
+   </div><!--index-fang-list/-->
+
+     <script>
+      layui.use('carousel', function(){
+       var carousel = layui.carousel;
+       //建造实例
+       carousel.render({
+        elem: '#test2'
+        ,width: '100%' //设置容器宽度
+        ,arrow: 'always' //始终显示箭头
+        //,anim: 'updown' //切换动画方式
+       });
+      });
+     </script>
+
+  </div>
+ </div>
+ <div class="copy">Copyright@ 2015 蘑菇租房 版权所有 沪ICP备1234567号-0&nbsp;&nbsp;&nbsp;&nbsp;技术支持：<a target="_blank" href="http://www.webqin.net/">秦王网络</a> </div>
+ <div class="bg100"></div>
+
+ <div id="fmadd" class="layui-container" style="display: none;margin-top: 10px">
+  <form class="layui-form layui-form-pane" action="#">
+
+   <h2>指定购房 <span class="close">X</span></h2>
+   <div class="layui-form-item">
+    <label class="layui-form-label">选择区域：</label>
+    <div class="layui-input-block">
+     <select>
+      <option>智慧园</option>
+      <option>立民村</option>
+      <option>塘口村</option>
+      <option>勤劳村</option>
+      <option>芦胜村</option>
+      <option>知新村</option>
+     </select>
+    </div>
+   </div>
+
+   <div class="layui-form-item">
+    <label class="layui-form-label">方式：</label>
+    <div class="layui-input-block">
+     <select>
+      <option>租房</option>
+      <option>优选品牌</option>
+      <option>热门地区</option>
+     </select>
+    </div>
+   </div>
+
+   <div class="layui-form-item">
+    <label class="layui-form-label">联系方式：</label>
+    <div class="layui-input-inline">
+     <input type="text" autocomplete="off" class="layui-input" />
+    </div>
+   </div>
+
+  </form>
+ </div>
+ <script type="application/javascript">
+
+  var layer;
+  layui.use(['layer','form','table'], function() {
+   layer = layui.layer;
+   var form = layui.form;
+   var table = layui.table;
+
+   //监听提交
+   form.on('submit(formDemo)', function (data) {
+    layer.msg(JSON.stringify(data.field));
+    return false;
+   });
+  })
+  function add() {
+   //  $("#fmadd").show();
+   var ap=layer.open({
+    type: 1,
+    content: $("#fmadd") //这里content是一个普通的String
+    ,area: ['800px', '600px'],
+    skin:'layui-layer-molv',
+    btn: ['新增', '取消']
+    ,yes: function(index, layero){
+     //按钮【按钮一】的回调
+     layer.msg("你新增了数据");
+    },
+   });
+  }
+
+ </script>
+</body>
+</html>
